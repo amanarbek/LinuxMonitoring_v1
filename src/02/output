@@ -1,0 +1,8 @@
+#!/bin/bash
+echo 'Writing the data to a file?(Y/N): ';
+read result;
+if [ $result = 'y' -o $result = 'Y' ]; then
+bash ./system_research > "$(date "+%d_%m_%y_%H_%M_%S.status")"
+else
+	exit 1
+fi
